@@ -37,6 +37,6 @@ public class Main {
 		} else {
 			System.out.println("No com port found!");
 		}
-
+// commento aggiuntivo
 	}
 }
