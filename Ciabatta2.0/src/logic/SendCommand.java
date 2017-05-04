@@ -31,7 +31,10 @@ public class SendCommand {
 			serialPort.setFlowControlMode(SerialPort.FLOWCONTROL_RTSCTS_IN | SerialPort.FLOWCONTROL_RTSCTS_OUT);
 
 			serialPort.writeString(command);
-		
+
+
+
+
 			serialPort.addEventListener(new PortReader(), SerialPort.MASK_RXCHAR);
 
 			// serialPort.closePort();
@@ -51,6 +54,14 @@ public class SendCommand {
 
 			}
 		}
+	}
+
+	public void resetSerialPort() {
+		serialPort = null;
+	}
+
+	public SerialPort getSerialPort() {
+		return serialPort;
 	}
 
 	private class PortReader implements SerialPortEventListener {
