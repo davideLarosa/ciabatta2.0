@@ -69,7 +69,8 @@ public class DataSend extends HttpServlet {
 
 				sendCommand.send(comPort, this.status.get(receivedData));
 
-				//request.getRequestDispatcher("index.html").forward(request, response);
+				// request.getRequestDispatcher("index.html").forward(request,
+				// response);
 			}
 		} else {
 			request.getRequestDispatcher("index.html").forward(request, response);

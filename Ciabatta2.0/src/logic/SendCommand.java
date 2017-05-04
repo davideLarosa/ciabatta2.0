@@ -32,9 +32,6 @@ public class SendCommand {
 
 			serialPort.writeString(command);
 
-
-
-
 			serialPort.addEventListener(new PortReader(), SerialPort.MASK_RXCHAR);
 
 			// serialPort.closePort();
